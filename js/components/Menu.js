@@ -7,8 +7,7 @@ class Menu {
     this.background = new Background();
     this.info = new Information(this.background.container);
     this.button = document.createElement('div');
-    this.button.style.backgroundImage =
-      'url(../assets/sprites/start-button.png)';
+    this.button.style.backgroundImage = 'url(assets/sprites/start-button.png)';
     this.button.style.width = '104px';
     this.button.style.height = '58px';
     this.button.style.position = 'absolute';
@@ -22,7 +21,7 @@ class Menu {
 
     this.background.scene.appendChild(this.button);
 
-    this.score = localStorage.getItem('score');
+    this.score = localStorage.getItem('score') || 0;
     this.bestScore = document.createElement('div');
     this.bestScore.style.width = SCORE_WIDTH;
     this.bestScore.style.position = 'absolute';

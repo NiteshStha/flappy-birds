@@ -17,7 +17,7 @@ class Bird {
   init = () => {
     this.birdEl = document.createElement('div');
     this.birdEl.style.backgroundImage =
-      'url(../assets/sprites/bluebird-midflap.png)';
+      'url(assets/sprites/bluebird-midflap.png)';
     this.birdEl.style.width = `${this.width}px`;
     this.birdEl.style.height = `${this.height}px`;
     this.birdEl.style.position = 'absolute';

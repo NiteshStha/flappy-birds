@@ -11,8 +11,7 @@ class Pipe {
 
   init = () => {
     this.pipeTop = document.createElement('div');
-    this.pipeTop.style.backgroundImage =
-      'url(../assets/sprites/pipe-green.png)';
+    this.pipeTop.style.backgroundImage = 'url(assets/sprites/pipe-green.png)';
     this.pipeTop.style.backgroundRepeat = 'no-repeat';
     this.pipeTop.style.backgroundSize = '100%';
     this.pipeTop.style.transform = 'rotate(180deg)';
@@ -24,7 +23,7 @@ class Pipe {
 
     this.pipeBottom = document.createElement('div');
     this.pipeBottom.style.backgroundImage =
-      'url(../assets/sprites/pipe-green.png)';
+      'url(assets/sprites/pipe-green.png)';
     this.pipeBottom.style.backgroundRepeat = 'no-repeat';
     this.pipeBottom.style.backgroundSize = '100%';
     this.pipeBottom.style.position = 'absolute';

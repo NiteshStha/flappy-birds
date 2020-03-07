@@ -29,14 +29,13 @@ class Background {
     this.container.appendChild(this.view);
 
     this.scene = document.createElement('div');
-    this.scene.style.backgroundImage =
-      'url(../assets/sprites/background-day.png)';
+    this.scene.style.backgroundImage = 'url(assets/sprites/background-day.png)';
     this.scene.style.height = `${this.sceneHeight}px`;
     this.scene.style.backgroundPositionX = `${this.x}px`;
     this.view.appendChild(this.scene);
 
     this.ground = document.createElement('div');
-    this.ground.style.backgroundImage = 'url(../assets/sprites/base.png)';
+    this.ground.style.backgroundImage = 'url(assets/sprites/base.png)';
     this.ground.style.height = `${this.groundHeight}px`;
     this.ground.style.backgroundPositionX = `${this.x}px`;
     this.view.appendChild(this.ground);
