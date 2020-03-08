@@ -24,17 +24,3 @@ const getTopPipeMaxHeight = () => {
 const getBottomPipeHeight = topHeight => {
   return SCENE_HEIGHT - topHeight - GAP;
 };
-
-/**
- * Generates the reverse value of the provided number.
- * @param {number} num The number value that is to be reversed.
- * @returns returns the reversed number value.
- */
-const reverseNumber = num => {
-  let rev = 0;
-  while (num !== 0) {
-    rev = rev * 10 + (num % 10);
-    num = Math.floor(num / 10);
-  }
-  return rev;
-};

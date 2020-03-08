@@ -9,12 +9,11 @@ class Score {
   init = () => {
     this.scoreBoard = document.createElement('div');
     this.scoreBoard.style.position = 'absolute';
-    this.scoreBoard.innerHTML = `Score: ${this.score}`;
-    this.scoreBoard.style.top = '4px';
-    this.scoreBoard.style.right = '10px';
-    this.scoreBoard.style.margin = '0 auto';
-    this.scoreBoard.style.zIndex = '100';
-    this.scoreBoard.style.color = '#fffdd0';
+    this.scoreBoard.style.top = '12px';
+    this.scoreBoard.style.left = '50%';
+    this.scoreBoard.style.transform = 'translateX(-50%)';
+
+    this.scoreBoard.style.zIndex = '200';
 
     this.parent.appendChild(this.scoreBoard);
   };
@@ -30,7 +29,23 @@ class Score {
    * Draws the score board in the game.
    */
   draw = () => {
-    this.scoreBoard.innerHTML = `Score: ${this.score}`;
+    this.scoreRev = reverseNumber(this.score);
+    // To clear the last score value from the DOM.
+    this.scoreBoard.innerHTML = '';
+
+    while (this.scoreRev !== 0) {
+      const digit = this.scoreRev % 10;
+      const numSprite = document.createElement('div');
+      numSprite.style.display = 'inline-block';
+      numSprite.style.backgroundImage = NUMBERS[digit];
+      numSprite.style.backgroundRepeat = 'no-repeat';
+      numSprite.style.width = `${NUMBER_SPRITE_DIMENSIONS.width}px`;
+      numSprite.style.height = `${NUMBER_SPRITE_DIMENSIONS.height}px`;
+      this.scoreBoard.appendChild(numSprite);
+
+      this.scoreRev = Math.floor(this.scoreRev / 10);
+    }
+    // this.scoreBoard.innerHTML = `Score: ${this.score}`;
   };
 
   /**

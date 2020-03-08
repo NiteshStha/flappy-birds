@@ -23,7 +23,7 @@ class Menu {
 
     this.score = localStorage.getItem('score') || 0;
     // Reverse the score so that when display each digit using modulus the number is in correct order.
-    this.scoreRev = reverseNumber(this.score);
+    this.scoreStr = this.score.toString();
     this.bestScore = document.createElement('div');
     this.bestScore.style.position = 'absolute';
     this.bestScore.style.top = '30%';
@@ -32,8 +32,8 @@ class Menu {
     this.background.scene.appendChild(this.bestScore);
 
     // Loop through each digits of the number and append it to the DOM.
-    while (this.scoreRev !== 0) {
-      const digit = this.scoreRev % 10;
+    for (let i = 0; i < this.scoreStr.length; i++) {
+      const digit = this.scoreStr[i];
       const numSprite = document.createElement('div');
       numSprite.style.display = 'inline-block';
       numSprite.style.backgroundImage = NUMBERS[digit];
@@ -41,8 +41,6 @@ class Menu {
       numSprite.style.width = `${NUMBER_SPRITE_DIMENSIONS.width}px`;
       numSprite.style.height = `${NUMBER_SPRITE_DIMENSIONS.height}px`;
       this.bestScore.appendChild(numSprite);
-
-      this.scoreRev = Math.floor(this.scoreRev / 10);
     }
   };
 
