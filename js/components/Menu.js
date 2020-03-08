@@ -22,7 +22,7 @@ class Menu {
     this.background.scene.appendChild(this.button);
 
     this.score = localStorage.getItem('score') || 0;
-    // Reverse the score so that when display each digit using modulus the number is in correct order.
+    // Convert the score to string to loop through each in character.
     this.scoreStr = this.score.toString();
     this.bestScore = document.createElement('div');
     this.bestScore.style.position = 'absolute';

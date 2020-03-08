@@ -29,12 +29,12 @@ class Score {
    * Draws the score board in the game.
    */
   draw = () => {
-    this.scoreRev = reverseNumber(this.score);
+    this.scoreStr = this.score.toString();
     // To clear the last score value from the DOM.
     this.scoreBoard.innerHTML = '';
 
-    while (this.scoreRev !== 0) {
-      const digit = this.scoreRev % 10;
+    for (let i = 0; i < this.scoreStr.length; i++) {
+      const digit = this.scoreStr[i];
       const numSprite = document.createElement('div');
       numSprite.style.display = 'inline-block';
       numSprite.style.backgroundImage = NUMBERS[digit];
@@ -42,8 +42,6 @@ class Score {
       numSprite.style.width = `${NUMBER_SPRITE_DIMENSIONS.width}px`;
       numSprite.style.height = `${NUMBER_SPRITE_DIMENSIONS.height}px`;
       this.scoreBoard.appendChild(numSprite);
-
-      this.scoreRev = Math.floor(this.scoreRev / 10);
     }
     // this.scoreBoard.innerHTML = `Score: ${this.score}`;
   };
