@@ -1,6 +1,7 @@
 class Information {
   constructor(parent) {
     this.parent = parent;
+    this.bestScore = localStorage.getItem('score').toString();
     this.currentLevel = this.getCurrentLevel();
 
     this.init();
@@ -27,6 +28,7 @@ class Information {
     this.heading = document.createElement('h2');
     this.heading.style.padding = '12px 20px';
     this.heading.style.fontStyle = 'italic';
+    this.heading.style.textAlign = 'center';
     this.heading.innerHTML = 'Instructions:';
     this.info.appendChild(this.heading);
 
@@ -142,6 +144,32 @@ class Information {
     this.board.style.boxShadow =
       '0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)';
     this.parent.appendChild(this.board);
+
+    this.bheading = document.createElement('h2');
+    this.bheading.style.padding = '12px 20px';
+    this.bheading.style.fontStyle = 'italic';
+    this.bheading.style.textAlign = 'center';
+    this.bheading.innerHTML = 'Leader Board:';
+    this.board.appendChild(this.bheading);
+
+    this.bestScoreDiv = document.createElement('div');
+    this.bestScoreDiv.style.position = 'absolute';
+    this.bestScoreDiv.style.left = '50%';
+    this.bestScoreDiv.style.top = '20%';
+    this.bestScoreDiv.style.transform = 'translate(-50%, -20%)';
+    this.board.appendChild(this.bestScoreDiv);
+
+    // Loop through each digits of the number and append it to the DOM.
+    for (let i = 0; i < this.bestScore.length; i++) {
+      const digit = this.bestScore[i];
+      const numSprite = document.createElement('div');
+      numSprite.style.display = 'inline-block';
+      numSprite.style.backgroundImage = NUMBERS[digit];
+      numSprite.style.backgroundRepeat = 'no-repeat';
+      numSprite.style.width = `${NUMBER_SPRITE_DIMENSIONS.width}px`;
+      numSprite.style.height = `${NUMBER_SPRITE_DIMENSIONS.height}px`;
+      this.bestScoreDiv.appendChild(numSprite);
+    }
   };
 
   /**
