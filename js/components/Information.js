@@ -38,7 +38,7 @@ class Information {
     this.li_1.style.margin = '8px 0px';
     this.li_1.style.textAlign = 'justify';
     this.li_1.innerHTML =
-      'Press the <b>start</b> button or press the <b>enter</b> key to start the game.';
+      'Press the <b>start</b> button or press the <b>enter or space</b> key to start the game.';
     this.list.appendChild(this.li_1);
 
     this.li_2 = document.createElement('li');

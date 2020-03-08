@@ -50,7 +50,8 @@ class Menu {
   start = event => {
     if (
       event.type === 'click' ||
-      (event.type === 'keydown' && event.keyCode === KEYCODE_ENTER)
+      (event.type === 'keydown' &&
+        (event.keyCode === KEYCODE_ENTER || event.keyCode === KEYCODE_SPACE))
     ) {
       this.button.removeEventListener('click', this.start);
       window.removeEventListener('keydown', this.start);
