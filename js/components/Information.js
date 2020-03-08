@@ -150,30 +150,35 @@ class Information {
     switch (event.target.id) {
       case 'easy':
         GAME_FPS = FPS.easy;
+        PIPE_GAP = PIPE_GAP_LEVEL.easy;
         this.currentLevel = this.getCurrentLevel();
         this.setLevel();
         break;
 
       case 'amateur':
         GAME_FPS = FPS.amateur;
+        PIPE_GAP = PIPE_GAP_LEVEL.amateur;
         this.currentLevel = this.getCurrentLevel();
         this.setLevel();
         break;
 
       case 'pro':
         GAME_FPS = FPS.pro;
+        PIPE_GAP = PIPE_GAP_LEVEL.pro;
         this.currentLevel = this.getCurrentLevel();
         this.setLevel();
         break;
 
       case 'god':
         GAME_FPS = FPS.god;
+        PIPE_GAP = PIPE_GAP_LEVEL.god;
         this.currentLevel = this.getCurrentLevel();
         this.setLevel();
         break;
 
       default:
         GAME_FPS = FPS.amateur;
+        PIPE_GAP = PIPE_GAP_LEVEL.amateur;
         this.currentLevel = this.getCurrentLevel();
         this.setLevel();
     }

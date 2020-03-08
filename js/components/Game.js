@@ -6,6 +6,7 @@ class Game {
   init = () => {
     this.pipes = [];
     this.space = 0;
+    this.pipeGap = PIPE_GAP;
     this.background = new Background();
     this.info = new Information(this.background.container);
     this.sounds = {
@@ -28,7 +29,8 @@ class Game {
     this.background.move();
 
     // Create pipes and move them
-    if (this.space >= VIEW_WIDTH - PIPE_WIDTH) {
+    console.log(this.pipeGap);
+    if (this.space >= this.pipeGap) {
       const pipe = new Pipe(this.background.scene);
       this.pipes.push(pipe);
       this.space = 0;

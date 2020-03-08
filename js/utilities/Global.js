@@ -11,7 +11,13 @@ const PIPE_MIN_HEIGHT = 100;
 const PIPE_MAX_HEIGHT = 320;
 
 const GAP = 120;
-const PIPE_GAP = 180;
+const PIPE_GAP_LEVEL = {
+  easy: 236,
+  amateur: 196,
+  pro: 176,
+  god: 156
+};
+let PIPE_GAP = PIPE_GAP_LEVEL.amateur;
 
 // Bird
 const BIRD_WIDTH = 34;

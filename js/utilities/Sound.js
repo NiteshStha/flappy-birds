@@ -11,14 +11,14 @@ class Sound {
   /**
    * Plays the sound.
    */
-  play = function() {
+  play = () => {
     this.sound.play();
   };
 
   /**
    * Stops the sound.
    */
-  stop = function() {
+  stop = () => {
     this.sound.pause();
   };
 
