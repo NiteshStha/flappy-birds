@@ -41,3 +41,16 @@ const SCORE_WIDTH = 36;
 const KEYCODE_SPACE = 32;
 const KEYCODE_ENTER = 13;
 let GAME_FPS = FPS.amateur;
+
+const numbers = {
+  0: 'url(assets/sprites/0.png)',
+  1: 'url(assets/sprites/1.png)',
+  2: 'url(assets/sprites/2.png)',
+  3: 'url(assets/sprites/3.png)',
+  4: 'url(assets/sprites/4.png)',
+  5: 'url(assets/sprites/5.png)',
+  6: 'url(assets/sprites/6.png)',
+  7: 'url(assets/sprites/7.png)',
+  8: 'url(assets/sprites/8.png)',
+  9: 'url(assets/sprites/9.png)'
+};
