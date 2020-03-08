@@ -42,6 +42,7 @@ const KEYCODE_SPACE = 32;
 const KEYCODE_ENTER = 13;
 let GAME_FPS = FPS.amateur;
 
+// Score number sprites
 const NUMBERS = {
   0: 'url(assets/sprites/0.png)',
   1: 'url(assets/sprites/1.png)',
@@ -53,4 +54,9 @@ const NUMBERS = {
   7: 'url(assets/sprites/7.png)',
   8: 'url(assets/sprites/8.png)',
   9: 'url(assets/sprites/9.png)'
+};
+
+const NUMBER_SPRITE_DIMENSIONS = {
+  width: 24,
+  height: 36
 };
