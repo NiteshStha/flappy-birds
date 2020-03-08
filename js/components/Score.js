@@ -43,7 +43,8 @@ class Score {
       numSprite.style.height = `${NUMBER_SPRITE_DIMENSIONS.height}px`;
       this.scoreBoard.appendChild(numSprite);
     }
-    // this.scoreBoard.innerHTML = `Score: ${this.score}`;
+    this.scoreBoard.style.left = '50%';
+    this.scoreBoard.style.transform = 'translateX(-50%)';
   };
 
   /**
