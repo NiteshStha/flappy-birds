@@ -42,7 +42,7 @@ const KEYCODE_SPACE = 32;
 const KEYCODE_ENTER = 13;
 let GAME_FPS = FPS.amateur;
 
-const numbers = {
+const NUMBERS = {
   0: 'url(assets/sprites/0.png)',
   1: 'url(assets/sprites/1.png)',
   2: 'url(assets/sprites/2.png)',
