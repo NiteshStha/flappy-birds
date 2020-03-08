@@ -10,6 +10,7 @@ class Information {
    * Initializes the informations of the game.
    */
   init = () => {
+    // Left Panel
     this.info = document.createElement('div');
     this.info.style.position = 'absolute';
     this.info.style.left = '50px';
@@ -127,6 +128,20 @@ class Information {
     this.level.style.textTransform = 'capitalize';
     this.level.innerHTML = `Level: ${this.currentLevel}`;
     this.info.appendChild(this.level);
+
+    // Right Panel
+    this.board = document.createElement('div');
+    this.board.style.position = 'absolute';
+    this.board.style.right = '50px';
+    this.board.style.top = '30%';
+    this.board.style.transform = 'translateY(-30%)';
+    this.board.style.width = '360px';
+    this.board.style.height = '400px';
+    this.board.style.backgroundColor = '#FFF384';
+    this.board.style.borderRadius = '12px';
+    this.board.style.boxShadow =
+      '0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)';
+    this.parent.appendChild(this.board);
   };
 
   /**
