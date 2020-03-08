@@ -6,6 +6,9 @@ class Information {
     this.init();
   }
 
+  /**
+   * Initializes the informations of the game.
+   */
   init = () => {
     this.info = document.createElement('div');
     this.info.style.position = 'absolute';
@@ -126,6 +129,10 @@ class Information {
     this.info.appendChild(this.level);
   };
 
+  /**
+   * Returns the current level of the game.
+   * @returns Returns a string value as the level of the game.
+   */
   getCurrentLevel = () => {
     switch (GAME_FPS) {
       case 60:
@@ -142,10 +149,16 @@ class Information {
     }
   };
 
+  /**
+   * Sets the current level of the game in the DOM element.
+   */
   setLevel = () => {
     this.level.innerHTML = `Level: ${this.currentLevel}`;
   };
 
+  /**
+   * Changes the level of the game. Increase the game speed and the pipe generation gap.
+   */
   changeLevel = event => {
     switch (event.target.id) {
       case 'easy':
