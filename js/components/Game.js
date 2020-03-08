@@ -29,7 +29,6 @@ class Game {
     this.background.move();
 
     // Create pipes and move them
-    console.log(this.pipeGap);
     if (this.space >= this.pipeGap) {
       const pipe = new Pipe(this.background.scene);
       this.pipes.push(pipe);
