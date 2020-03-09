@@ -1,7 +1,8 @@
 class Information {
   constructor(parent) {
     this.parent = parent;
-    this.bestScore = localStorage.getItem('score').toString();
+    this.bestScore = localStorage.getItem('score') || 0;
+    this.bestScore = this.bestScore.toString();
     this.currentLevel = this.getCurrentLevel();
 
     this.init();
